@@ -98,6 +98,13 @@
         settings:allowDividerAbove="true"
         settings:controller="com.android.settings.connecteddevice.AdvancedConnectedDeviceController" />
 
+    <Preference
+        android:key="libre_connect_app"
+        android:title="@string/libre_connect_title"
+        android:summary="@string/libre_connect_summary"
+        settings:allowDividerAbove="false"
+        settings:controller="com.android.settings.connecteddevice.LibreConnectPreferenceController" />
+
     <com.android.settingslib.widget.FooterPreference
         android:key="discoverable_footer"
         android:selectable="false"

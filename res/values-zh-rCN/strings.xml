@@ -5541,4 +5541,7 @@
     <string name="contacts_storage_account_category_title" msgid="6427149157377815586">"联系人信息保存位置"</string>
     <string name="search_gesture_feature_title" msgid="7037117019612710960">"圈定即搜"</string>
     <string name="search_gesture_feature_summary" msgid="1793056495030564014">"轻触并按住主屏幕按钮或导航手柄，即可使用屏幕上的内容进行搜索。"</string>
+    
+    <string name="libre_connect_title">自由互联</string>
+    <string name="libre_connect_summary">由KDE Connect提供支持</string>
 </resources>
