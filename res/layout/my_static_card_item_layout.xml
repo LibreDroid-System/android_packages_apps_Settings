@@ -96,6 +96,7 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/text_device_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nothing Phone 2"
@@ -148,6 +149,7 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/text_processor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="第一代骁龙 8+"
