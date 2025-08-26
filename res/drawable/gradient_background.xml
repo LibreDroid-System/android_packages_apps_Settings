@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 暗色模式：纯黑色背景（关键修改） -->
+    <item android:state_activated="true">
+        <shape>
+            <solid android:color="#000000" /> <!-- 直接使用纯黑纯色 -->
+            <corners android:radius="16dp" /> <!-- 保持与卡片一致的圆角 -->
+        </shape>
+    </item>
+
+    <!-- 亮色模式：保持原有蓝粉渐变 -->
+    <item>
+        <shape>
+            <gradient
+                android:angle="0"
+                android:endColor="#F8BBD0"
+                android:startColor="#B3E5FC"
+                android:type="linear"/>
+        </shape>
+    </item>
+</selector>

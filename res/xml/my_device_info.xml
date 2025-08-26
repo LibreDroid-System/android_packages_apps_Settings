@@ -23,9 +23,18 @@
 
     <com.android.settingslib.widget.LayoutPreference
         android:key="my_device_info_header"
-        android:order="-1"
+        android:order="54"
         android:layout="@layout/settings_entity_header"
         android:selectable="false"/>
+        
+    
+        <com.android.settingslib.widget.LayoutPreference
+            android:key="my_static_page_entry_key"
+            android:order="-1"
+            android:title="@string/my_static_card_page_entry_title"
+            android:layout="@layout/my_static_card_item_layout"
+            settings:keywords="@string/keywords_my_static_page"
+            android:selectable="false"/>
 
     <PreferenceCategory
         android:key="basic_info_category"
