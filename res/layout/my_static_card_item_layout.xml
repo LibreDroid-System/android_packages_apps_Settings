@@ -84,14 +84,13 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:contentDescription="设备图标"
-                        android:src="@drawable/outline_mobile_24"
-                        app:tint="?attr/colorPrimary" />
+                        android:src="@drawable/outline_mobile_24"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:text="设备名称"
+                        android:text="设备型号"
                         android:textSize="15sp"/>
                 </LinearLayout>
 
@@ -137,8 +136,7 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:contentDescription="信息图标"
-                        android:src="@drawable/outline_memory_24"
-                        app:tint="?attr/colorPrimary" />
+                        android:src="@drawable/outline_memory_24"/>
 
                     <TextView
                         android:layout_width="wrap_content"
