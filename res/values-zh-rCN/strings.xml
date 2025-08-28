@@ -5544,4 +5544,7 @@
     
     <string name="libre_connect_title">自由互联</string>
     <string name="libre_connect_summary">由KDE Connect提供支持</string>
+    
+    <string name="my_static_card_page_entry_title">关于LibreDroid</string>
+    <string name="keywords_my_static_page">libredroid, 关于, 详情</string>
 </resources>

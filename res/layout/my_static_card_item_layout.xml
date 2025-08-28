@@ -12,7 +12,7 @@
     android:orientation="vertical"
     android:clipToPadding="false">
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_liberdroid"
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -44,7 +44,7 @@
                 android:text="1.0"
                 android:textSize="32sp"/>
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
     
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,7 +52,7 @@
         android:orientation="horizontal">
 
         <!-- 左侧设备名称卡片 -->
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_device_name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -101,10 +101,10 @@
                     android:text="Nothing Phone 2"
                     android:textSize="16sp"/>
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
         <!-- 右侧处理器卡片 -->
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_processor"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -153,7 +153,7 @@
                     android:text="第一代骁龙 8+"
                     android:textSize="16sp"/>
             </LinearLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 </LinearLayout>
 

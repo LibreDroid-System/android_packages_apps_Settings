@@ -82,5 +82,7 @@
 
     <!-- Connected displays -->
     <color name="display_topology_background_color">@color/settingslib_color_charcoal</color>
+
+    <color name="card_border">#4A36A8</color>
 </resources>
 

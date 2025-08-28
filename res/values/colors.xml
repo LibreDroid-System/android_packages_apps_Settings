@@ -225,24 +225,10 @@
     <!-- Connected displays -->
     <color name="display_topology_background_color">@color/settingslib_color_grey100</color>
     
-    <color name="purple_500">#4A36A8</color>
-    <color name="pink_500">#F8BBD0</color>
-    <color name="blue_500">#B3E5FC</color>
-    <color name="dark_background">#D9000000</color>
-    <color name="light_background">#0F000000</color>
-    <color name="card_border">#4A36A8</color>
+    <color name="card_border">#8A7AE8</color>
+
     <color name="text_focus_light">#8A7AE8</color>
     <color name="text_common_light">#99000000</color>
     <color name="text_focus_dark">#4A36A8</color>
     <color name="text_common_dark">#FFFFFF</color>
-    <color name="purple_200">#BB86FC</color>
-    <color name="purple_700">#3700B3</color>
-    <color name="teal_200">#03DAC5</color>
-    <color name="teal_700">#018786</color>
-    <color name="white">#FFFFFF</color>
-    <color name="black">#000000</color>
-
-    <!-- 新增灰色背景色（可根据需求调整深浅） -->
-    <color name="base_gray">#E8E8E8</color> <!-- 浅灰色 -->
-    <color name="base_gray_dark">#2D2D2D</color> <!-- 深灰色（暗色模式） -->
 </resources>

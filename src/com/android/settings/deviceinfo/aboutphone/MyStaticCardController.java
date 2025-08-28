@@ -13,7 +13,10 @@ import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import androidx.cardview.widget.CardView;
 
+import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
+
+import android.content.res.Configuration;
 
 import com.android.settings.R; // 确保导入你自己的 R 文件
 import com.android.settings.core.BasePreferenceController;
@@ -43,12 +46,16 @@ public class MyStaticCardController extends BasePreferenceController {
         if (layoutPreference == null) {
             return;
         }
-
         TextView liberdroidText = layoutPreference.findViewById(R.id.text_liberdroid);
         // 2. 找到自定义布局中的TextViews
         TextView versionName = layoutPreference.findViewById(R.id.text_version);
         TextView deviceName = layoutPreference.findViewById(R.id.text_device_name); // 你需要在你的layout中为它添加ID
         TextView processorName = layoutPreference.findViewById(R.id.text_processor); // 你需要在你的layout中为它添加ID
+        setLDFocusColor(liberdroidText, versionName, deviceName, processorName);
+        
+    }
+
+    public void setLDFocusColor(TextView liberdroidText, TextView versionName, TextView deviceName, TextView processorName) {
 
         /*
         // 3. 更新TextView的内容
@@ -87,9 +94,17 @@ public class MyStaticCardController extends BasePreferenceController {
         String text = "LibreDroid";
         SpannableString spannable = new SpannableString(text);
 
-        // 根据主题获取文字颜色（引用colors.xml资源）
-        int focusColor = Color.parseColor("#FFBB86FC");
-        int commonColor = Color.parseColor("#B3FFFFFF"); 
+        int focusColor;
+        int commonColor; 
+
+        if (isNightModeEnabled()){
+            focusColor = mContext.getColor(R.color.text_focus_dark);
+            commonColor = mContext.getColor(R.color.text_common_dark);
+        } else {
+            focusColor = mContext.getColor(R.color.text_focus_light);
+            commonColor = mContext.getColor(R.color.text_common_light);
+        }
+        
 
         // 给特定字母设置颜色（L和D）
         spannable.setSpan(new ForegroundColorSpan(focusColor), 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -100,6 +115,17 @@ public class MyStaticCardController extends BasePreferenceController {
         // 应用到TextView
         liberdroidText.setText(spannable);
         versionName.setTextColor(focusColor);
+    }
+
+    public boolean isNightModeEnabled() {
+        int nightModeFlags = mContext.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+        return nightModeFlags == Configuration.UI_MODE_NIGHT_YES;
+    }
+
+    @Override
+    public void updateState(Preference preference) {
+        super.updateState(preference);
+        //setLDFocusColor();
     }
 
     /**

@@ -13922,21 +13922,6 @@
     <string name="libre_connect_title">Libre Connect</string>
     <string name="libre_connect_summary">Supported by KDE Connect</string>
     
-    <string name="my_static_card_page_entry_title">My Custom Static Info</string>
-    <string name="keywords_my_static_page">custom, static, info, card, my page</string> <!-- 搜索关键词 -->
-
-    <!-- 用于 MyStaticCardFragment 页面本身 -->
-    <string name="my_static_card_page_title">Custom Static Information</string>
-
-    <!-- 用于第一个卡片形状的 Preference -->
-    <string name="first_styled_card_title">Styled Card One</string>
-    <string name="first_styled_card_summary">This is the first item displayed with a custom card layout. It contains static text.</string>
-
-    <!-- 用于第二个卡片形状的 Preference -->
-    <string name="second_styled_card_title">Styled Card Two (Details)</string>
-    <string name="second_styled_card_summary">Another piece of information presented in a similar card style for consistency.</string>
-
-    <!-- 用于页面内标准的 Preference -->
-    <string name="standard_pref_title">Standard Preference Item</string>
-    <string name="standard_pref_summary">A regular preference item for comparison or additional info.</string>
+    <string name="my_static_card_page_entry_title">About LibreDroid</string>
+    <string name="keywords_my_static_page">libredroid, about, info</string>
 </resources>
