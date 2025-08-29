@@ -38,6 +38,9 @@ import com.android.settings.Utils;
 
 import java.util.HashSet;
 
+import android.provider.Settings;
+import android.content.ContentResolver;
+
 /**
  * Handles clone user creation and clone app install/uninstall.
  */
@@ -83,6 +86,40 @@ public class CloneBackend {
         // Trigger uninstall as clone user.
         activity.startActivityAsUser(uninstallIntent, UserHandle.of(mCloneUserId));
     }
+    
+    private void restoreClonedIME(int cloneUserId) {
+        ContentResolver cr = mContext.getContentResolver();
+        // 假设你要设置的输入法包名
+        String inputMethodId = "com.yuyan.pinyin.offline.release/com.yuyan.imemodule.service.ImeService";
+        
+        try {
+            String currentInputMethodId = Settings.Secure.getStringForUser(
+                cr,
+                Settings.Secure.DEFAULT_INPUT_METHOD,
+                cloneUserId
+            );
+            Settings.Secure.putStringForUser(
+                    cr,
+                    Settings.Secure.ENABLED_INPUT_METHODS,
+                    inputMethodId,
+                    cloneUserId
+                );
+            Settings.Secure.putStringForUser(
+                    cr,
+                    Settings.Secure.DEFAULT_INPUT_METHOD,
+                    inputMethodId,
+                    cloneUserId
+                );
+            if (ManageApplications.DEBUG) {
+            Log.d(TAG, "成功为用户 " + cloneUserId + " 设置默认输入法.");
+            }
+        } catch (Exception e) {
+            if (ManageApplications.DEBUG) {
+                Log.e(TAG, "设置默认输入法失败：", e);
+            }
+            
+        }
+    }
 
     /**
      * Installs another instance of given package in clone user.
@@ -115,6 +152,7 @@ public class CloneBackend {
                 if (ManageApplications.DEBUG) {
                     Log.d(TAG, "Created clone user " + mCloneUserId);
                 }
+                restoreClonedIME(mCloneUserId);
             } else {
                 mCloneUserId = -1;
             }
